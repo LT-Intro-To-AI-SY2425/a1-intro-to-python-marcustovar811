@@ -17,7 +17,7 @@ assert fizbuzz(5) == "Buzz", "fizzbuzz 5 test"
 assert fizbuzz(6) == "Fizz", "fizzbuzz 6 test"
 assert fizbuzz(15) == "FizzBuzz", "fizzbuzz 15 test"
 
-## AI Problem #1, "Prime Number Finder"
+## AI Problem #1, "Prime Number Finder", created by ChatGPT
 
 import math
 10
@@ -34,3 +34,4 @@ elif():
         if num % i == 0:
             print ("False") 
     print ("True")
+
