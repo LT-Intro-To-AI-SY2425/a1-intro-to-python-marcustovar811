@@ -118,7 +118,12 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    sorted_lst = sorted(lst)
+    n = len(sorted_lst)
+    if n % 2 == 1:
+        return sorted_lst[n // 2]
+    else:
+        return (sorted_lst[n // 2 - 1] + sorted_lst[n // 2] ) / 2
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
