@@ -103,7 +103,11 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    return sum(lst) / len(lst)
+    # returns the sum of all ints in list divided by length of list, the Java way
+    if lst: 
+        return sum(lst) / len(lst)
+    else:
+        return 0
 
 
 def median(lst: List[int]) -> float:
@@ -118,12 +122,21 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    sorted_lst = sorted(lst)
-    n = len(sorted_lst)
-    if n % 2 == 1:
-        return sorted_lst[n // 2]
+    # AI way
+    # sorted_lst = sorted(lst)
+    # n = len(sorted_lst)
+    # if n % 2 == 1:
+    #     return sorted_lst[n // 2]
+    # else:
+    #     return (sorted_lst[n // 2 - 1] + sorted_lst[n // 2] ) / 2
+
+    if len(lst) % 2 == 1:
+        mid = len(list) // 2
+        return lst[mid]
     else:
-        return (sorted_lst[n // 2 - 1] + sorted_lst[n // 2] ) / 2
+        mid1 = len(list) / 2
+        mid2 = mid1 - 1
+        return(lst[mid1] + lst[mid2]) / 2
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
@@ -162,7 +175,7 @@ if __name__ == "__main__":
     assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
     assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
-
+    assert median([1, 2, 3, 4, 5, 6]) == 3.5, "median of [1,2,3,4,5,6] failed"
     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
     assert duck_duck_goose(names) == ["roscoe", "law"]
 
