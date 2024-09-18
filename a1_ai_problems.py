@@ -35,3 +35,27 @@ elif():
             print ("False") 
     print ("True")
 
+## AI Problem #2, "Anagram Checker", created by ChatGPT
+def are_anagrams(s1, s2):
+    # Normalize the strings by converting to lowercase and removing spaces
+    s1_normalized = s1.replace(" ", "").lower()
+    s2_normalized = s2.replace(" ", "").lower()
+    
+    # Sort the characters and compare
+    return sorted(s1_normalized) == sorted(s2_normalized)
+
+## AI Problem #3, "Vowel Checker", created by ChatGPT
+
+def count_vowels(s):
+    # Define the set of vowels
+    vowels = "aeiouAEIOU"
+    
+    # Initialize a counter
+    count = 0
+    
+    # Iterate through each character in the string
+    for char in s:
+        if char in vowels:  # Check if the character is a vowel
+            count += 1  # Increment the counter
+    
+    return count
