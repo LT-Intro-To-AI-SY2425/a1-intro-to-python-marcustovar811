@@ -131,12 +131,12 @@ def median(lst: List[int]) -> float:
     #     return (sorted_lst[n // 2 - 1] + sorted_lst[n // 2] ) / 2
 
     if len(lst) % 2 == 1:
-        mid = len(list) // 2
+        mid = len(lst) // 2
         return lst[mid]
     else:
-        mid1 = len(list) / 2
+        mid1 = len(lst) // 2
         mid2 = mid1 - 1
-        return(lst[mid1] + lst[mid2]) / 2
+        return (lst[mid1] + lst[mid2]) / 2
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
@@ -158,11 +158,30 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    curr = 0
+    # curr = 0
+    # while len(lst) > 2:
+    #     curr = (curr + 2) % len(lst)
+    #     del lst[curr]
+    # print(lst)
+    # return lst
+
+    # Mr Berg's Way
+
+    i = 0
+    current = "duck1"
     while len(lst) > 2:
-        curr = (curr + 2) % len(lst)
-        del lst[curr]
-    print(lst)
+        if current == "duck1":
+            i+=1
+            current = "duck2"
+        elif current == "duck2":
+            i+=1 
+            current = "goose"
+        else:
+            lst.pop(i)
+            current = "duck1"
+
+        #If we reach the end, wrap back around
+        if i == len(lst): i = 0
     return lst
 
 
