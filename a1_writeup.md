@@ -17,8 +17,10 @@ Mr. Berg will look at all your files to determine what you have completed.  If t
 I think python resembles Java a lot, with there being shared characteristcics between both programming languages. I was in advisory today and I heard another student that takes this class talking about how python is so much better than java, talking about how you can put everything into a single line. I would have to agree, I think python is probably more accessable compared to java and easier to utilize.
 
 2. Describe some similarities and differences that you found betw een python and other programming languages you have used in the past?
+
 One thing in python is definitely the lack of semicolons, which threw me off since I have been using java for so long. However, some tings thare similar are the incorportation of conditional statements like if and else, and also I saw through some AI problems about how you had to import some modules for your code to work, similar to java. Also, I don't realy see "curly brackets" being used that much in python, as compared to Java. 
 
 
 3. What are some things that you learned through this assignment?
+
 I learned how to use some conditional statements and perform mathematic operations in python. I also learned how to complete some basic arithmetic problems and manipulating strings. I learned how to define variables in python as well, as well as the use of a double division sign. 
